@@ -1,5 +1,7 @@
 package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,6 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener{
             Toast.makeText(this,"Click",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HomeTypesActivity::class.java)
+            intent.putExtra("extra_data","Lab 2")
+            startActivity(intent)
         }
     }
 }
