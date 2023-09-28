@@ -13,6 +13,6 @@
         android:id="@+id/condominium_apartment"
         android:title="Condominium Apartment" />
     <item
-        android:id="@+id/twon_house"
+        android:id="@+id/town_house"
         android:title="Town House" />
 </menu>
