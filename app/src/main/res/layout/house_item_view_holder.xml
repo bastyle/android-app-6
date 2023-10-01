@@ -93,7 +93,7 @@
                 android:paddingLeft="0dp"
                 android:textStyle="normal"
                 android:textSize="11dp"
-                android:text="Request visit"/>
+                android:text="Book Showing"/>
 
         </LinearLayout>
 

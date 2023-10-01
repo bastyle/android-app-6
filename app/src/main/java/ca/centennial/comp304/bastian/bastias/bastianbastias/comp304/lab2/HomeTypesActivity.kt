@@ -41,7 +41,7 @@ class HomeTypesActivity:AppCompatActivity() {
         reader = InputStreamReader(inputStream)
 
         houses = gson.fromJson(reader, object : TypeToken<List<HouseItem>>() {}.type)
-        adapter.updateList(houses)
+        //adapter.updateList(houses)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -51,36 +51,56 @@ class HomeTypesActivity:AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        var typeAux=String()
         when (item.itemId) {
             R.id.apartment -> {
-                showApartments()
-                return true
+                //showApartments()
+                typeAux = "Apartment"
+                //findByType("Apartment")
+                //return true
             }
             R.id.detached_home -> {
-                showDetachedHomes()
-                return true
+                //showDetachedHomes()
+                typeAux = "Detached Home"
+                //findByType("Detached Home")
+                //return true
             }
             R.id.semi_detached_home -> {
-                showSemiDetachedHomes()
-                return true
+                typeAux = "Semi Detached Home"
+                //showSemiDetachedHomes()
+                //return true
             }
             R.id.condominium_apartment -> {
-                showCondoApartments()
-                return true
+                typeAux = "Condo"
+                //showCondoApartments()
+                //return true
             }
             R.id.town_house -> {
-                showTownhouses()
-                return true
+                typeAux = "Townhouse"
+                //showTownhouses()
+                //return true
             }
-            else -> return super.onOptionsItemSelected(item)
         }
+        if (typeAux.isNullOrBlank()){
+            return super.onOptionsItemSelected(item)
+        }else{
+            findByType(typeAux)
+            //return (if (typeAux==null|| typeAux == "") { super.onOptionsItemSelected(item)} else true)
+            return true
+        }
+
     }
 
+    private fun findByType(type:String){
+        adapter.updateList(houses.filter { it.type.equals(type, ignoreCase = true) })
+    }
 
     private fun showApartments() {
         // Display available apartments and checkboxes
         Toast.makeText(this, "Displaying available apartments", Toast.LENGTH_SHORT).show()
         // Implement your UI and logic here
+        //val housesAux= List<HouseItem>()
+        adapter.updateList(houses.filter { it.type.equals("Apartment", ignoreCase = true) })
     }
 
     private fun showDetachedHomes() {

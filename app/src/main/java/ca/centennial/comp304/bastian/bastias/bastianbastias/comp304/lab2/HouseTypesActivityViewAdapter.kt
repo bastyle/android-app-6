@@ -29,9 +29,12 @@ class HouseTypesActivityViewAdapter(private val context: Context) : RecyclerView
         return super.getItemViewType(position)
     }
 
-    fun updateList(textList:List<HouseItem>){
+    fun updateList(houses:List<HouseItem>){
+        val size=stringList.size
         stringList.clear()
-        stringList.addAll(textList)
-        notifyItemInserted(0)
+        notifyItemRangeRemoved(0,size)
+        stringList.addAll(houses)
+        //notifyItemInserted(0)
+        notifyItemRangeInserted(0, houses.size)
     }
 }
