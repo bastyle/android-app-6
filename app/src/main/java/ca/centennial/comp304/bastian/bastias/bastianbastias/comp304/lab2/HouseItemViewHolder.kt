@@ -21,8 +21,9 @@ class HouseItemViewHolder(private val binding: HouseItemViewHolderBinding):Recyc
         //val drawable = getDrawable(R.drawable.your_drawable_resource, null)
 
         binding.appointment.setOnCheckedChangeListener{_, isChecked ->
-            Log.e("hOLDER>>","isCHec: "+isChecked)
+            Log.e("hOLDER>>","isCHec: "+isChecked+" itemCheck?:"+item.isChecked)
             Log.e("hOLDER>>","id: "+item.id)
+            item.isChecked=isChecked
         }
     }
 }

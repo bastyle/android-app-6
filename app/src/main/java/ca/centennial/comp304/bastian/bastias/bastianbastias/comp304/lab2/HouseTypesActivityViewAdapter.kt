@@ -10,11 +10,14 @@ import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.H
 class HouseTypesActivityViewAdapter(private val context: Context) : RecyclerView.Adapter<HouseItemViewHolder>(){
 
     private val stringList = ArrayList<HouseItem>()
+    private lateinit var holder:HouseItemViewHolder
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseItemViewHolder {
         // with the type it's possible create different view holders.
         val binding = HouseItemViewHolderBinding.inflate(LayoutInflater.from(parent.context),parent, false)
-        return HouseItemViewHolder(binding)
+        holder = HouseItemViewHolder(binding)
+        //return HouseItemViewHolder(binding)
+        return holder
     }
 
     override fun onBindViewHolder(holder: HouseItemViewHolder, position: Int) {
