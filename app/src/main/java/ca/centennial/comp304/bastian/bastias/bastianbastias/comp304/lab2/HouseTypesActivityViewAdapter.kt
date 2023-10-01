@@ -4,10 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databinding.HouseItemViewHolderBinding
+import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.HouseItem
 
 class HouseTypesActivityViewAdapter : RecyclerView.Adapter<HouseItemViewHolder>(){
 
-    private val stringList = ArrayList<String>()
+    private val stringList = ArrayList<HouseItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseItemViewHolder {
         // with the type it's possible create different view holders.
@@ -27,7 +28,7 @@ class HouseTypesActivityViewAdapter : RecyclerView.Adapter<HouseItemViewHolder>(
         return super.getItemViewType(position)
     }
 
-    fun updateList(textList:List<String>){
+    fun updateList(textList:List<HouseItem>){
         stringList.clear()
         stringList.addAll(textList)
         notifyItemInserted(0)

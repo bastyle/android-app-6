@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databinding.ActivityHomeTypesBinding
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.HouseItem
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import java.io.InputStream
 import java.io.InputStreamReader
 import java.util.*
@@ -49,37 +50,22 @@ class HomeTypesActivity:AppCompatActivity() {
 
         //val houseItemList = mutableListOf<HouseItem>()
         val auxList = ArrayList<String>()
-        //val items:TypedArray = resources.obtainTypedArray(R.array.house_items)
-        //loadHouseData()
-
         val inputStream: InputStream = resources.openRawResource(R.raw.house_data)
         val reader = InputStreamReader(inputStream)
         val gson = Gson()
-        val houses: Array<HouseItem> = gson.fromJson(reader, Array<HouseItem>::class.java)
+        //val houses: Array<HouseItem> = gson.fromJson(reader, Array<HouseItem>::class.java)
+        val houses: List<HouseItem> = gson.fromJson(reader, object : TypeToken<List<HouseItem>>() {}.type)
         auxList.add("222")
-        houses.forEach {
+        adapter.updateList(houses)
+
+        /*houses.forEach {
             auxList.add(it.type)
             Log.e("TAG", ":::::::::")
             Log.e("TAG",it.type)
             Log.e("TAG", "-----------------")
         }
+        adapter.updateList(auxList)*/
 
-       /* val houseItemsArray = resources.obtainTypedArray(R.array.house_items)
-
-        for (i in 0 until houseItemsArray.length()) {
-            val itemResId = houseItemsArray.getResourceId(i, 0)
-            val houseType = resources.getStringArray(itemResId)[0]
-            auxList.add(houseType)
-            val imageResId = resources.getIntArray(itemResId)[1]
-            val address = resources.getStringArray(itemResId)[2]
-            val price = resources.getStringArray(itemResId)[3].toDouble()
-
-            val houseItem = HouseItem(houseType, imageResId, address, price)
-            houseItemList.add(houseItem)
-        }
-
-        houseItemsArray.recycle()*/
-        adapter.updateList(auxList)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
