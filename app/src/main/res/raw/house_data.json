@@ -1,23 +1,26 @@
 [
   {
     "type": "Apartment",
-    "description": "Art Shoppe Condos, Ne Corner View. 2 Bed, 2 Bath, 2 Balconies. ",
-    "image": "apartment_1.jpg",
-    "address": "123 Main St, City",
+    "id": 1,
+    "description": "Art Shoppe Condos, Ne Corner View. 2 Bed, 2 Bath, 2 Balconies. Cozy But Open Living Room With All Day Sun. Unobstructed East View And North Facing Balcony.",
+    "image": "apartment_1",
+    "address": "#123 Main St, City",
     "price": "$500,000"
   },
   {
     "type": "Apartment",
+    "id": 2,
     "description": "Cozy But Open Living Room With All Day Sun.",
-    "image": "apartment_2.jpg",
-    "address": "456 Elm St, City",
+    "image": "apartment_2",
+    "address": "#456 Elm St, City",
     "price": "$250,000"
   },
   {
     "type": "Townhouse",
+    "id": 3,
     "description": "North Facing Balcony. Gym, Pool, Hot Tub, Party Rm, Kids Club",
     "image": "house3.jpg",
-    "address": "789 Oak St, City",
+    "address": "#789 Oak St, City",
     "price": "$350,000"
   }
 ]

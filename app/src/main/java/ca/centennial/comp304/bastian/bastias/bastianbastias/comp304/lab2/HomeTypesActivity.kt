@@ -31,7 +31,7 @@ class HomeTypesActivity:AppCompatActivity() {
         binding = ActivityHomeTypesBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //
-        adapter = HouseTypesActivityViewAdapter()
+        adapter = HouseTypesActivityViewAdapter(baseContext)
         binding.recyclerView.adapter=this.adapter
         binding.recyclerView.layoutManager =
             LinearLayoutManager(this,

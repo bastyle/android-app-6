@@ -1,12 +1,13 @@
 package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databinding.HouseItemViewHolderBinding
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.HouseItem
 
-class HouseTypesActivityViewAdapter : RecyclerView.Adapter<HouseItemViewHolder>(){
+class HouseTypesActivityViewAdapter(private val context: Context) : RecyclerView.Adapter<HouseItemViewHolder>(){
 
     private val stringList = ArrayList<HouseItem>()
 
@@ -17,7 +18,7 @@ class HouseTypesActivityViewAdapter : RecyclerView.Adapter<HouseItemViewHolder>(
     }
 
     override fun onBindViewHolder(holder: HouseItemViewHolder, position: Int) {
-        holder.bind(stringList[position])
+        holder.bind(stringList[position],context)
     }
 
     override fun getItemCount(): Int {
