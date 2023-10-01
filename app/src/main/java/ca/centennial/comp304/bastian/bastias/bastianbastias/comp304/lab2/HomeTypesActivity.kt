@@ -15,13 +15,16 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.InputStream
 import java.io.InputStreamReader
-import java.util.*
-import kotlin.collections.ArrayList
+
 
 
 class HomeTypesActivity:AppCompatActivity() {
     private lateinit var binding: ActivityHomeTypesBinding
     private lateinit var adapter: HouseTypesActivityViewAdapter
+    private val gson = Gson()
+    private lateinit var reader:InputStreamReader
+    private lateinit var inputStream: InputStream
+    private lateinit var houses: List<HouseItem>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,38 +37,11 @@ class HomeTypesActivity:AppCompatActivity() {
             LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL,
                 false)
-        //adapter.updateList(listOf("1","2","3","1","2","3","1","2","3"))
-        /*adapter.updateList(
-            listOf(
-                RecyclerViewItemModel("Ontario", RecyclerViewHolderViewType.TEXT_TYPE),
-                RecyclerViewItemModel(R.drawable.phone_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
-                RecyclerViewItemModel("British Columbia", RecyclerViewHolderViewType.TEXT_TYPE),
-                RecyclerViewItemModel(R.drawable.bluetooth_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
-                RecyclerViewItemModel("PEI", RecyclerViewHolderViewType.TEXT_TYPE),
-                RecyclerViewItemModel(R.drawable.settings_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
-                RecyclerViewItemModel("Quebec", RecyclerViewHolderViewType.TEXT_TYPE),
-                RecyclerViewItemModel(R.drawable.science_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
-            )
-        )*/
+        inputStream = resources.openRawResource(R.raw.house_data)
+        reader = InputStreamReader(inputStream)
 
-        //val houseItemList = mutableListOf<HouseItem>()
-        val auxList = ArrayList<String>()
-        val inputStream: InputStream = resources.openRawResource(R.raw.house_data)
-        val reader = InputStreamReader(inputStream)
-        val gson = Gson()
-        //val houses: Array<HouseItem> = gson.fromJson(reader, Array<HouseItem>::class.java)
-        val houses: List<HouseItem> = gson.fromJson(reader, object : TypeToken<List<HouseItem>>() {}.type)
-        auxList.add("222")
+        houses = gson.fromJson(reader, object : TypeToken<List<HouseItem>>() {}.type)
         adapter.updateList(houses)
-
-        /*houses.forEach {
-            auxList.add(it.type)
-            Log.e("TAG", ":::::::::")
-            Log.e("TAG",it.type)
-            Log.e("TAG", "-----------------")
-        }
-        adapter.updateList(auxList)*/
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -100,13 +76,6 @@ class HomeTypesActivity:AppCompatActivity() {
         }
     }
 
-    fun loadHouseData(): Array<HouseItem> {
-        val inputStream: InputStream = resources.openRawResource(R.raw.house_data)
-        val reader = InputStreamReader(inputStream)
-        val gson = Gson()
-        val houses: Array<HouseItem> = gson.fromJson(reader, Array<HouseItem>::class.java)
-        return houses
-    }
 
     private fun showApartments() {
         // Display available apartments and checkboxes
