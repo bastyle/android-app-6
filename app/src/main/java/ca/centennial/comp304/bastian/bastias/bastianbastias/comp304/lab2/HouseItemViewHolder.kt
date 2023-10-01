@@ -11,6 +11,10 @@ class HouseItemViewHolder(private val binding: HouseItemViewHolderBinding):Recyc
     }*/
 
     fun bind(item: HouseItem) {
-        binding.textItemViewHolderTextView.text = item.type
+        binding.type.text = item.type
+        binding.address.text = item.address
+        binding.description.text = item.description
+        binding.price.text=item.price
+        //binding.
     }
 }
