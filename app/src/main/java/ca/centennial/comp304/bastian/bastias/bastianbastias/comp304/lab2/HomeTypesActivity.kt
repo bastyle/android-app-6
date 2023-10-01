@@ -1,13 +1,21 @@
 package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2
 
+
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databinding.ActivityHomeTypesBinding
+import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.HouseItem
+import com.google.gson.Gson
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class HomeTypesActivity:AppCompatActivity() {
@@ -25,7 +33,7 @@ class HomeTypesActivity:AppCompatActivity() {
             LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL,
                 false)
-        adapter.updateList(listOf("1","2","3","1","2","3","1","2","3"))
+        //adapter.updateList(listOf("1","2","3","1","2","3","1","2","3"))
         /*adapter.updateList(
             listOf(
                 RecyclerViewItemModel("Ontario", RecyclerViewHolderViewType.TEXT_TYPE),
@@ -38,6 +46,40 @@ class HomeTypesActivity:AppCompatActivity() {
                 RecyclerViewItemModel(R.drawable.science_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
             )
         )*/
+
+        //val houseItemList = mutableListOf<HouseItem>()
+        val auxList = ArrayList<String>()
+        //val items:TypedArray = resources.obtainTypedArray(R.array.house_items)
+        //loadHouseData()
+
+        val inputStream: InputStream = resources.openRawResource(R.raw.house_data)
+        val reader = InputStreamReader(inputStream)
+        val gson = Gson()
+        val houses: Array<HouseItem> = gson.fromJson(reader, Array<HouseItem>::class.java)
+        auxList.add("222")
+        houses.forEach {
+            auxList.add(it.type)
+            Log.e("TAG", ":::::::::")
+            Log.e("TAG",it.type)
+            Log.e("TAG", "-----------------")
+        }
+
+       /* val houseItemsArray = resources.obtainTypedArray(R.array.house_items)
+
+        for (i in 0 until houseItemsArray.length()) {
+            val itemResId = houseItemsArray.getResourceId(i, 0)
+            val houseType = resources.getStringArray(itemResId)[0]
+            auxList.add(houseType)
+            val imageResId = resources.getIntArray(itemResId)[1]
+            val address = resources.getStringArray(itemResId)[2]
+            val price = resources.getStringArray(itemResId)[3].toDouble()
+
+            val houseItem = HouseItem(houseType, imageResId, address, price)
+            houseItemList.add(houseItem)
+        }
+
+        houseItemsArray.recycle()*/
+        adapter.updateList(auxList)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -70,6 +112,14 @@ class HomeTypesActivity:AppCompatActivity() {
             }
             else -> return super.onOptionsItemSelected(item)
         }
+    }
+
+    fun loadHouseData(): Array<HouseItem> {
+        val inputStream: InputStream = resources.openRawResource(R.raw.house_data)
+        val reader = InputStreamReader(inputStream)
+        val gson = Gson()
+        val houses: Array<HouseItem> = gson.fromJson(reader, Array<HouseItem>::class.java)
+        return houses
     }
 
     private fun showApartments() {

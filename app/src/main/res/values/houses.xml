@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="house_items">
+        <item>
+            <houseType>Apartment</houseType>
+            <image>@drawable/1</image>
+            <address>123 Main St</address>
+            <price>250000.0</price>
+        </item>
+        <!-- Add more items as needed -->
+    </array>
+</resources>
