@@ -13,7 +13,7 @@ class HouseItemViewHolder(private val binding: HouseItemViewHolderBinding):Recyc
     }*/
 
     fun bind(item: HouseItem, ctx:Context) {
-        binding.type.text = item.type +" id: ".plus("1000").plus(item.id)
+        binding.type.text = item.type +" id: ".plus("# AF10-0").plus(item.id)
         binding.address.text = item.address
         binding.description.text = item.description
         binding.price.text=item.price

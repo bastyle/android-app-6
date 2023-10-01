@@ -10,17 +10,179 @@
   {
     "type": "Apartment",
     "id": 2,
-    "description": "Cozy But Open Living Room With All Day Sun.",
+    "description": "Assignment* Priced to sell!!! South East facing corner unit, 2 bedroom 2 baths, functional layout. The building is conveniently located at high demand area in Scarborough.",
     "image": "apartment_2",
     "address": "#456 Elm St, City",
     "price": "$250,000"
   },
   {
-    "type": "Townhouse",
+    "type": "Apartment",
     "id": 3,
-    "description": "North Facing Balcony. Gym, Pool, Hot Tub, Party Rm, Kids Club",
-    "image": "house3.jpg",
-    "address": "#789 Oak St, City",
-    "price": "$350,000"
+    "description": "Art Shoppe Condos, Ne Corner View. 2 Bed, 2 Bath, 2 Balconies. Cozy But Open Living Room With All Day Sun. Unobstructed East View And North Facing Balcony. ",
+    "image": "apartment_3",
+    "address": "#2307 -5 SOUDAN AVE",
+    "price": "$50,000"
+  },
+  {
+    "type": "Apartment",
+    "id": 4,
+    "description": "Prestigious cosmo residences built by menkes. At a very convenient location of yonge and sheppard. Steps to subway/ttc, grocery, shopping, banks and restaurants.",
+    "image": "apartment_4",
+    "address": "#456 Elm St, City",
+    "price": "$3,000"
+  },
+  {
+    "type": "Apartment",
+    "id": 5,
+    "description": "Few minutes to hwy 401. A must see floorplan with no waist space. Open concept unit with modern kitchen that overlooks living and dining area.",
+    "image": "apartment_5",
+    "address": "#456 Elm St, City",
+    "price": "$2,500"
+  },
+  {
+    "type": "Townhouse",
+    "id": 6,
+    "description": "Welcome To This Gorgeous Freehold Townhome By Mattamy! Walking Distance T Mount Pleasant Go Station. Park Facing Home. Features Large Eat In Kitchen",
+    "image": "townhouse_1",
+    "address": "#18 DONOMORE DR",
+    "price": "$3,500"
+  },
+  {
+    "type": "Townhouse",
+    "id": 7,
+    "description": "With Stainless Steel Appliances. Separate Living / family And Dining. 3rd Floor Leads To Huge 3 Bedrooms And Full Washrooms. ",
+    "image": "townhouse_2",
+    "address": "#607 -31 BALES AVE",
+    "price": "$1,500"
+  },
+  {
+    "type": "Townhouse",
+    "id": 8,
+    "description": "Gorgeous Almost New 3 Bedrooms and 3 Full Washrooms Corner Unit Townhouse in a High Demand Neighborhood with 2 parking spots side-by-side (rare find)",
+    "image": "townhouse_3",
+    "address": "U 12 70 ORCHID PLACE DR",
+    "price": "$1,450"
+  },
+  {
+    "type": "Townhouse",
+    "id": 9,
+    "description": "Tarion Warranty Under Effect. Main Level w/ Upgraded Flooring & Pot Lights, Spacious Layout, Modern Open Concept Kitchen & Living/Dining w/ Backsplash.",
+    "image": "townhouse_4",
+    "address": "#607 SANTA RAQUEL AVE",
+    "price": "$3,510"
+  },
+  {
+    "type": "Townhouse",
+    "id": 10,
+    "description": "With Stainless Steel Appliances. Separate Living / family And Dining. 3rd Floor Leads To Huge 3 Bedrooms And Full Washrooms. ",
+    "image": "townhouse_5",
+    "address": "#607 -31 BALES AVE",
+    "price": "$1,500"
   }
+,
+  {
+    "type": "Detached Home",
+    "id": 11,
+    "description": "Welcome to 24 Maplehurst Sq with its great Heart Lake location & easy access to Hwy 410/401.",
+    "image": "detached_1",
+    "address": "#24 MAPLEHURST SQ",
+    "price": "$2,500"
+  },
+  {
+    "type": "Detached Home",
+    "id": 12,
+    "description": "This 4 bedroom 5-Level Backsplit has a separate entrance to the in-law suite which is fully set up with another bedroom",
+    "image": "detached_2",
+    "address": "#24 la legua",
+    "price": "$2,500"
+  },
+  {
+    "type": "Detached Home",
+    "id": 13,
+    "description": "2nd kitchen, full bathroom, & additional living room. The main house area has a beautiful modern kitchen and a spa-like bathroom",
+    "image": "detached_3",
+    "address": "#420 santa amalia av",
+    "price": "$2,500"
+  },
+  {
+    "type": "Detached Home",
+    "id": 14,
+    "description": " Lots of space for the family to enjoy. Last but not least is the entertainers backyard. Enjoy the large deck and BBQ area and then end your evening in the relaxing hot-tub.",
+    "image": "detached_4",
+    "address": "#2323 del huerto sur",
+    "price": "$2,500"
+  },
+  {
+    "type": "Semi Detached Home",
+    "id": 15,
+    "description": "Income property Rare 3 Bed Raised Bungalow on quiet cres very bright and spacious New Paint. New Flooring New Blinds, New Oven",
+    "image": "semi_detached_1",
+    "address": "#123 Main Street,",
+    "price": "$2,500"
+  },
+  {
+    "type": "Semi Detached Home",
+    "id": 16,
+    "description": "Dishwasher on the Main floor, Furnace 2022, New Garage Door, comes with 3 Beds 1 Bath on the main level, and 2 Beds 1 Bath on the Lower level",
+    "image": "semi_detached_2",
+    "address": "#456 Elm Avenue, Townsville",
+    "price": "$6,500"
+  },
+  {
+    "type": "Semi Detached Home",
+    "id": 17,
+    "description": "Separate Entrance to Lower apartment, 3-car parking, Side by Side, and GOOD SIZE Yard with W/O Lower level! Like Buying 2 Full Houses in One! ",
+    "image": "semi_detached_3",
+    "address": "#789 Oak Lane, Villageton",
+    "price": "$4,500"
+  },
+  {
+    "type": "Semi Detached Home",
+    "id": 18,
+    "description": "Above Grade Basement Apartment Feels like a Main Level with/ Oversized Windows & Open-Concept Layout Close To Major Hwys 401, 403/407",
+    "image": "semi_detached_4",
+    "address": "#101 Pine Road, Hamletville",
+    "price": "$1,500"
+  },
+  {
+    "type": "Semi Detached Home",
+    "id": 19,
+    "description": "Meadowvale Town Centre & Theatre, Community Center, Parks, and Schools.**** EXTRAS **** Main Fl New S/S Stove, New S/S Dishwasher, S/S Fridge/Freezer. Lower Fl S/S Stove",
+    "image": "semi_detached_5",
+    "address": "#802 Maple Lane, Metropolis",
+    "price": "$2,100"
+  },
+  {
+    "type": "Condo",
+    "id": 20,
+    "description": "Art Shoppe Condos, Ne Corner View. 2 Bed, 2 Bath, 2 Balconies. Cozy But Open Living Room With All Day Sun. Unobstructed East View And North Facing Balcony.",
+    "image": "condo_1",
+    "address": "#555 Willow Avenue, Beachside",
+    "price": "$2,900"
+  },
+  {
+    "type": "Condo",
+    "id": 21,
+    "description": "Oven/Cook Top, Hood Fan, Microwave, Stacked Washer/Dryer, Island, Parking & Locker. (33169597)",
+    "image": "condo_2",
+    "address": "#709 -350 WEBB DR",
+    "price": "$2,800"
+  },
+  {
+    "type": "Condo",
+    "id": 22,
+    "description": "Gym, Pool, Hot Tub, Party Rm, Kids Club, Private Dining Rooms Plus More Fantastic Amenities.**** EXTRAS **** Built-In Fridge/Freezer, Dishwasher,",
+    "image": "condo_3",
+    "address": "#",
+    "price": "$2,200"
+  },
+  {
+    "type": "Condo",
+    "id": 23,
+    "description": "Art Shoppe Condos, Ne Corner View. 2 Bed, 2 Bath, 2 Balconies. Cozy But Open Living Room With All Day Sun. Unobstructed East View And North Facing Balcony.",
+    "image": "condo_4",
+    "address": "#2307 -5 SOUDAN AVE",
+    "price": "$1,400"
+  }
+
 ]
