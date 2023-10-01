@@ -5,16 +5,39 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databinding.ActivityHomeTypesBinding
 
 
 class HomeTypesActivity:AppCompatActivity() {
     private lateinit var binding: ActivityHomeTypesBinding
+    private lateinit var adapter: HouseTypesActivityViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeTypesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //
+        adapter = HouseTypesActivityViewAdapter()
+        binding.recyclerView.adapter=this.adapter
+        binding.recyclerView.layoutManager =
+            LinearLayoutManager(this,
+                LinearLayoutManager.VERTICAL,
+                false)
+        adapter.updateList(listOf("1","2","3","1","2","3","1","2","3"))
+        /*adapter.updateList(
+            listOf(
+                RecyclerViewItemModel("Ontario", RecyclerViewHolderViewType.TEXT_TYPE),
+                RecyclerViewItemModel(R.drawable.phone_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
+                RecyclerViewItemModel("British Columbia", RecyclerViewHolderViewType.TEXT_TYPE),
+                RecyclerViewItemModel(R.drawable.bluetooth_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
+                RecyclerViewItemModel("PEI", RecyclerViewHolderViewType.TEXT_TYPE),
+                RecyclerViewItemModel(R.drawable.settings_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
+                RecyclerViewItemModel("Quebec", RecyclerViewHolderViewType.TEXT_TYPE),
+                RecyclerViewItemModel(R.drawable.science_image.toString(), RecyclerViewHolderViewType.IMAGE_TYPE),
+            )
+        )*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

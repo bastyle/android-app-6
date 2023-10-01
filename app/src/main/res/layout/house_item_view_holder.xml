@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    android:elevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <TableLayout
+            android:id="@+id/table_layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/apartment_1"
+                    app:layout_constraintLeft_toRightOf="@id/text_item_view_holder_text_view" />
+
+                <TextView
+                    android:id="@+id/text_item_view_holder_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toLeftOf="@id/imageView2"
+                    tools:text="Place Holder Text" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/button_2_1"
+                    android:layout_weight="1"
+                    android:text="button 2 1" />
+
+                <View android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button_2_2"
+                    android:layout_weight="1"
+                    android:text="button 2 2" />
+            </TableRow>
+        </TableLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
