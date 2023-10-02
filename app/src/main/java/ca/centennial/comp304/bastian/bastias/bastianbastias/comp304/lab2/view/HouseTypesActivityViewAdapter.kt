@@ -14,10 +14,8 @@ class HouseTypesActivityViewAdapter(private val context: Context) : RecyclerView
     private lateinit var holder: HouseItemViewHolder
     private var showingList = ArrayList<Int>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseItemViewHolder {
-        // with the type it's possible create different view holders.
         val binding = HouseItemViewHolderBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         holder = HouseItemViewHolder(binding)
-        //return HouseItemViewHolder(binding)
         return holder
     }
 

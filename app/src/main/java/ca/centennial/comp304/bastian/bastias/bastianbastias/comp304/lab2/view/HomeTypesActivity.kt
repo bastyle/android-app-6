@@ -1,6 +1,7 @@
 package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.view
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -41,10 +42,14 @@ class HomeTypesActivity:AppCompatActivity() {
         adapter.updateList(houses)
 
         binding.checkoutButton.setOnClickListener{
-            val showingHouses = houses.filter { it.id in adapter.getShowingList() }
-            showingHouses.forEach{
-                Log.e("Tag",it.id.toString())
+            //val showingHouses = houses.filter { it.id in adapter.getShowingList() }
+            //val showingHouses = ArrayList(houses.map { it.id })
+            adapter.getShowingList().forEach{
+                Log.e("HomeTypesActivity","id to send:: ".plus(it.toString()))
             }
+            val intent = Intent(this,CheckoutActivity::class.java)
+            intent.putIntegerArrayListExtra("showedIds",adapter.getShowingList())
+            startActivity(intent)
         }
     }
 
