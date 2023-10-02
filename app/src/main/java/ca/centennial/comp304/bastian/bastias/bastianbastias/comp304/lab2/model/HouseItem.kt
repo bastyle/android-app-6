@@ -7,5 +7,5 @@ data class HouseItem(
     val address: String,
     val price: String,
     val description: String,
-    var isChecked: Boolean
+    var isChecked: Boolean = false
 )
