@@ -1,4 +1,4 @@
-package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2
+package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.view
 
 import android.content.Context
 import android.util.Log

@@ -12,7 +12,7 @@
         android:theme="@style/Theme.BastianBastias_COMP304Lab2"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeTypesActivity"/>
+        <activity android:name=".view.HomeTypesActivity"/>
     </application>
 
 </manifest>

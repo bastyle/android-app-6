@@ -1,7 +1,6 @@
-package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2
+package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.view
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast

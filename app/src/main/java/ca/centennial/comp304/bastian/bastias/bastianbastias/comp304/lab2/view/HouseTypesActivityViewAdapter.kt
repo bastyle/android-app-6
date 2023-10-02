@@ -1,4 +1,4 @@
-package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2
+package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.view
 
 import android.content.Context
 import android.util.Log
@@ -11,7 +11,7 @@ import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.H
 class HouseTypesActivityViewAdapter(private val context: Context) : RecyclerView.Adapter<HouseItemViewHolder>(){
 
     private val houseList = ArrayList<HouseItem>()
-    private lateinit var holder:HouseItemViewHolder
+    private lateinit var holder: HouseItemViewHolder
     private var showingList = ArrayList<Int>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseItemViewHolder {
         // with the type it's possible create different view holders.
@@ -32,6 +32,10 @@ class HouseTypesActivityViewAdapter(private val context: Context) : RecyclerView
 
     override fun getItemViewType(position: Int): Int {
         return super.getItemViewType(position)
+    }
+
+    fun getShowingList():ArrayList<Int>{
+        return showingList
     }
 
     fun updateList(houses:List<HouseItem>){

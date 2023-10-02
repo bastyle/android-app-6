@@ -1,11 +1,13 @@
-package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2
+package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.view
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.R
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databinding.ActivityHomeTypesBinding
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.HouseItem
 import com.google.gson.Gson
@@ -37,6 +39,13 @@ class HomeTypesActivity:AppCompatActivity() {
         reader = InputStreamReader(inputStream)
         houses = gson.fromJson(reader, object : TypeToken<List<HouseItem>>() {}.type)
         adapter.updateList(houses)
+
+        binding.checkoutButton.setOnClickListener{
+            val showingHouses = houses.filter { it.id in adapter.getShowingList() }
+            showingHouses.forEach{
+                Log.e("Tag",it.id.toString())
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
