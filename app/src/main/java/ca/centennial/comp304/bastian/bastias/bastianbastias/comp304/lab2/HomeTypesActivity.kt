@@ -36,7 +36,7 @@ class HomeTypesActivity:AppCompatActivity() {
         inputStream = resources.openRawResource(R.raw.house_data)
         reader = InputStreamReader(inputStream)
         houses = gson.fromJson(reader, object : TypeToken<List<HouseItem>>() {}.type)
-        //adapter.updateList(houses)
+        adapter.updateList(houses)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
