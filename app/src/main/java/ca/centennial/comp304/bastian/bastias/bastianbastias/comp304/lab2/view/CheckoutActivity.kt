@@ -49,10 +49,10 @@ class CheckoutActivity:AppCompatActivity() {
             adapter.updateList(houses)
         }
 
-        binding.radioGroup.setOnCheckedChangeListener { group, checkedId ->
-            Log.e("HouseCheckoutViewHolder", "checkedId:: " + checkedId)
+        /*binding.radioGroup.setOnCheckedChangeListener { group, checkedId ->
+            Log.e("HouseCheckoutViewHolder", "checkedId:: $checkedId")
             Toast.makeText(this,"checkedId:: " + checkedId,Toast.LENGTH_SHORT).show()
-        }
+        }*/
 
     }
 }
