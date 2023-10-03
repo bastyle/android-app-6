@@ -9,6 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </RadioGroup>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_margin="16dp"
@@ -17,6 +24,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/house_checkout_view_holder"
             tools:ignore="MissingConstraints" />
+
 
         <Button
             android:id="@+id/payment_button"

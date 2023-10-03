@@ -34,6 +34,7 @@
 
 
         <LinearLayout
+            android:id="@+id/linear_layout_holder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -60,22 +61,24 @@
                 android:textStyle="bold"
                 tools:text="$10.000" />
 
-            <RadioGroup
+            <RadioButton
+                android:id="@+id/radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:paddingLeft="0dp"
+                android:textStyle="normal"
+                android:textSize="0dp"
+                android:text=""/>
+
+            <!--<RadioGroup
                 android:id="@+id/radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/rbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:paddingLeft="0dp"
-                    android:textStyle="normal"
-                    android:textSize="0dp"
-                    android:text=""/>
-            </RadioGroup>
+
+            </RadioGroup>-->
 
 
         </LinearLayout>
