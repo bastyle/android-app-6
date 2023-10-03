@@ -1,5 +1,6 @@
 package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.RadioGroup
@@ -49,10 +50,12 @@ class CheckoutActivity:AppCompatActivity() {
             adapter.updateList(houses)
         }
 
-        /*binding.radioGroup.setOnCheckedChangeListener { group, checkedId ->
-            Log.e("HouseCheckoutViewHolder", "checkedId:: $checkedId")
-            Toast.makeText(this,"checkedId:: " + checkedId,Toast.LENGTH_SHORT).show()
-        }*/
+
+        binding.paymentButton.setOnClickListener{
+            val intent = Intent(this, PaymentActivity::class.java)
+            intent.putExtra("extra_data","Lab 2")
+            startActivity(intent)
+        }
 
     }
 }

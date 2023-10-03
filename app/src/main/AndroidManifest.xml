@@ -12,7 +12,7 @@
         android:theme="@style/Theme.BastianBastias_COMP304Lab2"
         tools:targetApi="31">
         <activity
-            android:name=".view.PaymentDetailsActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".view.HomeTypesActivity"/>
         <activity android:name=".view.CheckoutActivity"/>
+        <activity android:name=".view.PaymentDetailsActivity"/>
+        <activity android:name=".view.PaymentActivity"/>
     </application>
 
 </manifest>
