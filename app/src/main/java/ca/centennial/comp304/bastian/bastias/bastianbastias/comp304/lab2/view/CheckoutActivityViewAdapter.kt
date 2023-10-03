@@ -10,15 +10,15 @@ import androidx.recyclerview.widget.RecyclerView
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databinding.HouseCheckoutViewHolderBinding
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.HouseItem
 
-class CheckoutActivityViewAdapter(private val context: Context, private val radioGroup: RadioGroup): RecyclerView.Adapter<HouseCheckoutViewHolder>() {
+class CheckoutActivityViewAdapter(private val context: Context): RecyclerView.Adapter<HouseCheckoutViewHolder>() {
     private val showedHouseList = ArrayList<HouseItem>()
     //private lateinit var radioGroup:RadioGroup
-    lateinit var radioButtonSelected: RadioButton
+    //lateinit var radioButtonSelected: RadioButton
     var radioButtonList = ArrayList<RadioButton>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseCheckoutViewHolder {
         val binding = HouseCheckoutViewHolderBinding.inflate(LayoutInflater.from(parent.context),parent, false)
-        radioButtonSelected = RadioButton(context)
-        return HouseCheckoutViewHolder(binding,radioButtonSelected)
+        //radioButtonSelected = RadioButton(context)
+        return HouseCheckoutViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: HouseCheckoutViewHolder, position: Int) {

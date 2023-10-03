@@ -10,24 +10,20 @@ import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.databin
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.HouseItem
 
 
-class HouseCheckoutViewHolder(private val binding: HouseCheckoutViewHolderBinding, public var radioButtonSelected:RadioButton): RecyclerView.ViewHolder(binding.root) {
+class HouseCheckoutViewHolder(private val binding: HouseCheckoutViewHolderBinding): RecyclerView.ViewHolder(binding.root) {
     companion object{
         const val TAG="HouseCheckoutViewHolder"
     }
     fun bind(item: HouseItem, ctx: Context, radioButtonList: ArrayList<RadioButton>) {
-        Log.e(TAG," bind item: ".plus(item.id.toString()))
+        Log.e(TAG," binding item: ".plus(item.id.toString()))
         binding.address.text=item.address
         binding.price.text=item.price
         val imageId = ctx.resources.getIdentifier(item.image,"drawable",ctx.packageName)
         binding.mainImage.setImageResource(imageId)
-        //binding.rbutton.id=item.id
-        //binding.rbutton.text=item.id.toString()
-        //binding.radioButton.id=item.id
-
         val rButton = binding.radioButton
         rButton.id=item.id
         radioButtonList.add(rButton)
-        Log.e(TAG,"radioButtonList.size: "+radioButtonList.size)
+        //Log.e(TAG,"radioButtonList.size: "+radioButtonList.size)
         rButton.setOnClickListener {
             // Handle the click event for RadioButton 1
            // Log.e("Holder","it: "+view.id+" isSelected:: " + view.isSelected)
@@ -38,7 +34,6 @@ class HouseCheckoutViewHolder(private val binding: HouseCheckoutViewHolderBindin
                     Log.e(TAG,"unchecking radiobutton id: "+item.id)
                     rb.isChecked=false
                 }
-                radioButtonSelected = rButton
             }
         }
     }

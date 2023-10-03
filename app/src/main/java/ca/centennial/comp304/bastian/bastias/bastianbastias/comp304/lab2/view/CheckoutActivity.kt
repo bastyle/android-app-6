@@ -22,14 +22,14 @@ class CheckoutActivity:AppCompatActivity() {
     private lateinit var reader:InputStreamReader
     private lateinit var inputStream: InputStream
     private lateinit var houses: List<HouseItem>
-    private lateinit var radioGroup: RadioGroup
+    //private lateinit var radioGroup: RadioGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCheckoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        radioGroup = binding.radioGroup
-        adapter=CheckoutActivityViewAdapter(baseContext, radioGroup)
+        //radioGroup = binding.radioGroup
+        adapter=CheckoutActivityViewAdapter(baseContext)
         binding.recyclerView.adapter=adapter
         binding.recyclerView.layoutManager =
             LinearLayoutManager(this,
