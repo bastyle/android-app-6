@@ -11,10 +11,8 @@ import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.model.H
 
 
 class HouseCheckoutViewHolder(private val binding: HouseCheckoutViewHolderBinding, public var radioButtonSelected:RadioButton): RecyclerView.ViewHolder(binding.root) {
-    //var radioButtonList = ArrayList<RadioButton>()
-    //lateinit var radioButtonSelected:RadioButton
     companion object{
-        val TAG="HouseCheckoutViewHolder"
+        const val TAG="HouseCheckoutViewHolder"
     }
     fun bind(item: HouseItem, ctx: Context, radioButtonList: ArrayList<RadioButton>) {
         Log.e(TAG," bind item: ".plus(item.id.toString()))
@@ -30,23 +28,15 @@ class HouseCheckoutViewHolder(private val binding: HouseCheckoutViewHolderBindin
         rButton.id=item.id
         radioButtonList.add(rButton)
         Log.e(TAG,"radioButtonList.size: "+radioButtonList.size)
-        rButton.setOnClickListener { view ->
+        rButton.setOnClickListener {
             // Handle the click event for RadioButton 1
            // Log.e("Holder","it: "+view.id+" isSelected:: " + view.isSelected)
-            Log.e(TAG,"rbutton: "+rButton.id+" isChecked:: " + rButton.isChecked)
-            //Toast.makeText(ctx,"it: "+it.id+" isSelected:: " + it.isSelected, Toast.LENGTH_SHORT).show()
-            //Toast.makeText(ctx,"rbutton: "+rButton.id+" isChecked:: " + rButton.isChecked, Toast.LENGTH_SHORT).show()
-            Log.e(TAG,"radioButtonSelected: "+radioButtonSelected.id+" isChecked:: " + radioButtonSelected.isChecked)
+            //Log.e(TAG,"rbutton: "+rButton.id+" isChecked:: " + rButton.isChecked)
+            //Log.e(TAG,"radioButtonSelected: "+radioButtonSelected.id+" isChecked:: " + radioButtonSelected.isChecked)
             if (rButton.isChecked) {
-                //Log.e(TAG,"isChecked: ")
-                // RadioButton  is selected
-                //Log.e(TAG,"radioButtonList.size::: "+radioButtonList.size)
-                /*radioButtonList.forEach {
-                    Log.e(TAG,"foreach 1 id: "+item.id)
-                }*/
-                (radioButtonList.filter { item -> (item.isChecked && item.id!=rButton.id) }).forEach{
+                (radioButtonList.filter { item -> (item.isChecked && item.id!=rButton.id) }).forEach{rb->
                     Log.e(TAG,"unchecking radiobutton id: "+item.id)
-                    it.isChecked=false
+                    rb.isChecked=false
                 }
                 radioButtonSelected = rButton
             }
