@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_payment_details.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/textViewFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Full Name" />
+
+    <EditText
+        android:id="@+id/editTextFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFullName"
+        android:hint="Enter full name"
+        android:autofillHints="name"
+        android:maxLength="24"
+        android:inputType="text" />
+
+
+
+
+    <TextView
+        android:id="@+id/textViewCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFullName"
+        android:text="Card Number" />
+
+    <EditText
+        android:id="@+id/editTextCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCardNumber"
+        android:hint="Enter card number"
+        android:maxLength="16"
+        android:autofillHints="creditCardNumber"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewExpiration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCardNumber"
+        android:text="Expiration Date" />
+
+    <LinearLayout
+        android:id="@+id/expirationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewExpiration"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextExpirationMonth"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="MM"
+            android:inputType="number"
+            android:maxLength="2" />
+
+        <EditText
+            android:id="@+id/editTextExpirationYear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="YY"
+            android:inputType="number"
+            android:maxLength="2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewFavoriteSport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expirationLayout"
+        android:text="Favorite Sport" />
+
+    <EditText
+        android:id="@+id/editTextFavoriteSport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFavoriteSport"
+        android:hint="Enter favorite sport"
+        android:maxLength="24"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textViewFavoriteMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFavoriteSport"
+        android:text="Favorite Music" />
+
+    <EditText
+        android:id="@+id/editTextFavoriteMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFavoriteMusic"
+        android:hint="Enter favorite Music"
+        android:maxLength="24"
+        android:inputType="text" />
+
+
+
+
+    <Button
+        android:id="@+id/btnSubmitDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFavoriteMusic"
+        android:text="Submit" />
+</RelativeLayout>
