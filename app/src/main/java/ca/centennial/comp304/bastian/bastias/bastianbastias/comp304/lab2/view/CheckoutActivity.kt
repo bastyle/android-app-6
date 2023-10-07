@@ -53,6 +53,13 @@ class CheckoutActivity:AppCompatActivity() {
 
         binding.paymentButton.setOnClickListener{
             val intent = Intent(this, PaymentActivity::class.java)
+
+
+            val rButtonAux = (adapter.radioButtonList.filter { item -> (item.isChecked ) })
+            if (rButtonAux==null || rButtonAux.size==0|| rButtonAux.get(0)==null || !rButtonAux.get(0).isChecked) {
+                Toast.makeText(this, "Please make your choice", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             intent.putExtra("extra_data","Lab 2")
             startActivity(intent)
         }

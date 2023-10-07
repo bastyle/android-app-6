@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.R
@@ -46,6 +47,10 @@ class HomeTypesActivity:AppCompatActivity() {
             //val showingHouses = ArrayList(houses.map { it.id })
             adapter.getShowingList().forEach{
                 Log.e("HomeTypesActivity","id to send:: ".plus(it.toString()))
+            }
+            if(adapter.getShowingList().size==0){
+                Toast.makeText(this, "Please select at least one item", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
             val intent = Intent(this,CheckoutActivity::class.java)
             intent.putIntegerArrayListExtra("showedIds",adapter.getShowingList())

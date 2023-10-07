@@ -18,6 +18,8 @@ class CheckoutActivityViewAdapter(private val context: Context): RecyclerView.Ad
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HouseCheckoutViewHolder {
         val binding = HouseCheckoutViewHolderBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         //radioButtonSelected = RadioButton(context)
+        //binding.radioButton.setOnClickListener {
+        radioButtonList.add(binding.radioButton)
         return HouseCheckoutViewHolder(binding)
     }
 

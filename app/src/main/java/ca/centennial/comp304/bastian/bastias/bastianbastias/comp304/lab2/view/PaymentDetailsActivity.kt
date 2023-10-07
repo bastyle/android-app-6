@@ -1,5 +1,6 @@
 package ca.centennial.comp304.bastian.bastias.bastianbastias.comp304.lab2.view
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -42,8 +43,16 @@ class PaymentDetailsActivity : AppCompatActivity() {
             } else {
                 // Perform further actions (e.g., process payment and store user preferences)
                 // Display a success message or navigate to the next screen
-                Toast.makeText(this, "Payment details submitted successfully", Toast.LENGTH_LONG)
-                    .show()
+                //Toast.makeText(this, "Payment details submitted successfully", Toast.LENGTH_LONG).show()
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Payment").setMessage("Payment details submitted successfully.")
+                // Add a positive button
+                builder.setPositiveButton("OK") { dialog, which ->
+                    dialog.dismiss() // Dismiss the dialog
+                }
+                // Create and show the dialog
+                val dialog = builder.create()
+                dialog.show()
             }
         }
     }

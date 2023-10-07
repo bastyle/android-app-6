@@ -13,6 +13,7 @@ class PaymentActivity:AppCompatActivity() {
 
     companion object{
         const val PAYMENT_METHOD_KEY="payment_method"
+        const val HOUSE_SELECTED_KEY="HOUSE_SELECTED"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
